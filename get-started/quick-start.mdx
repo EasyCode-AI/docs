@@ -1,30 +1,105 @@
 ---
-title: 'Quick Start'
-description: 'Get started with EasyCode Flow in 5 minutes'
+title: "Quick Start"
+description: "Get started with EasyCode Flow in 5 minutes"
 ---
 
-This quickstart guide will walk you through building a full stack app using EasyCode Flow's core features. By the end, you will be familiar with the end to end process from planning to deployment. 
+This quickstart guide will walk you through building a full stack app using EasyCode Flow's core features. By the end, you will be familiar with the end to end process from planning to deployment.
 
-<Info>**Prerequisites**: If you haven't installed and set up the IDE, please follow the Installation Guide</Info>
+<Info>
+  **Prerequisites**: If you haven't installed and set up the IDE, please follow the Installation Guide
+</Info>
 
-## Plan your app
+As an example, we will use the following app idea:
 
-EasyCode Flow will assess your initial prompt and break it down into smaller steps instead of trying to oneshot the idea. This follows best practices when coding with AI and will significantly increase the code quality.
+> ```
+> Build a notes app with user authentication
+> ```
 
-[Insert Image]
+## 1. Plan your app
 
-You can review the plan, and either **Accept**, **Reject**, or chat with the plan to make any necessary modifications.
+EasyCode assesses your initial prompt and breaks it down into logical steps instead of trying to one-shot the idea. This increases code quality and prevents errors from accumulating.
 
-<Tip>If you alraedy have a PRD, you can also paste the entire PRD in the initial prompt</Tip>
+[images/quick-start/planning.mp4]
 
-## Build the first screen
+- Enter app idea
+- Give app name
+- Review the plan
+- **Accept**, **Reject**, or **Chat** to modify the plan
 
-Most of the time, the AI will start with the front end by building out the "main page" of your app. At the end of it
+<Tip>
+  If you alraedy have a detailed PRD, you can copy and paste the PRD into the initial prompt and EasyCode will break it down to logical steps. 
+</Tip>
 
-## Add Authentication
+## 2. Build the first screen
+
+Once the plan is accepted, the AI will start implementation. The first step will be building out the "main page" of your app so you can confirm it's what you want. 
+
+[images/quick-start/frontend.mp4]
+
+- Approve agent's context selection
+- Wait for code changes to finish
+- Click **Open App** to inspect the app inside EasyCode Browser
+- **Chat** to make adjustment or **Start Next Step**
+
+<Tip>
+  The app is still a mock up at this stage, core functionalities are likely not implemented yet and will be added during later steps. 
+</Tip>
+
+## 3. Connect Supabase
+
+Since our initial prompt required user authentication, we will need to connect Supabase. When prompted:
+
+[images/quick-start/supabase.mp4]
+
+- Connect to your Supabase
+- Approve access to organization
+- Return to EasyCode Flow and **create a new project**. 
+- Approve Supabase changes
+
+<Warning>
+  Currently we only integrate with new Supabase projects. If you'd like to use your existing Supabase project, let us know here and you will be the first to know when it becomes available. 
+</Warning>
 
 ## Deploy your app
 
+Deployment is easy inside EasyCode. 
+
+[images/quick-start/deploy.mp4]
+
+- Click **Deploy** -\> **Deploy App **in the EasyCode Flow menu bar
+- Wait for deployment to complete
+- Inspect the deployed URL 
+
+<Info>
+  Support for custom domain is coming soon. 
+</Info>
+
 ## Next Steps
 
+<CardGroup cols={2}>
+  <Card title="Debugging" icon="arrow-up-right" iconType="regular">
+    Fix errors the right way.
+  </Card>
+  <Card title="Connect APIs" icon="arrow-up-right">
+    Integrate with 3rd party APIs such as OpenAI, Stripe, etc.
+  </Card>
+</CardGroup>
+
 ## Common Problems
+
+<AccordionGroup>
+  <Accordion title="I cannot connect my Supabase account.">
+    - ~~Make~~ sure you still have available project slots in your Supabase organization. If you are on a free Supabase plan, you will have 2 project slots. 
+    - If you already have 2 or more projects, you can pause one of the projects to make room for new projects.
+
+    If all fails, try creating a New Organization in Supabase on a free tier, and click "Connect to Supabase" again from within EasyCode to initiate the access authorization. 
+  </Accordion>
+  <Accordion title="My deployment failed.">
+    Make sure all linter errors and runtime errors are fixed before trying to deploy. 
+
+    After fixing any remaining errors, initiate deployment again. 
+  </Accordion>
+  <Accordion title="I'm stuck trying to fix an error">
+    
+  </Accordion>
+</AccordionGroup>
