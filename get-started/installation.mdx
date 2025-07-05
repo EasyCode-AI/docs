@@ -1,68 +1,98 @@
 ---
-title: 'Installation'
-description: 'Set up EasyCode Flow.'
+title: "Installation"
+description: "Set up EasyCode Flow."
 ---
 
-EasyCode Flow is an **IDE** for vibe coders. Unlike web based AI app builders, EasyCode Flow needs to be installed on your operating system.
+EasyCode Flow is an **IDE for vibe coders**. Unlike web based app builders, EasyCode Flow needs to be installed on your operating system.
 
 This provides many benefits:
+
 - you have full control of the development environment
 - you have full ownership of the codebase
 - you have full access to IDE features
 
+## Download
+
 <Tabs>
-  <Tab title="Apple Silicon">
-    🖥️ **Apple Silicon (M1/M2/M3)**
-    
-    1. Download the Apple Silicon installer from the official website.
-    2. Open the downloaded `.pkg` file and follow the on-screen instructions.
-    3. If you use Homebrew, run:
-    
-    ```sh
-    arch -arm64 brew install <your-package>
-    ```
-    4. After installation, verify with:
-    ```sh
-    <your-app> --version
-    ```
-    5. If you encounter issues with Rosetta, ensure you are running the native Apple Silicon version.
+  <Tab title="MacOS">
+    <CardGroup cols={2}>
+      <Card title="Apple Silicon" icon="download" horizontal>
+        M Series Macs
+      </Card>
+      <Card title="Apple Intel" icon="download" horizontal>
+        Intel based Macs
+      </Card>
+    </CardGroup>
+    1. Download the correct installer from above.
+    2. Open the installer, move EasyCode to the Applications folder.
+    3. Open EasyCode.
+
+    [images/get-started/install-macos.mp4]
+
+    ## Initial Set Up
+
+    EasyCode requires **NodeJS** and **Git** to function properly.
+
+    [images/get-started/setup.png]
+
+    If they are not installed, EasyCode will guide you through the installation.
+
+    <Note>
+      During Git installation, you will asked to include `xcode-select`, make sure to **Accept**. This step will take 5-10 minutes but is the only official to install **Git**.
+
+      [images/get-started/xcode.png]
+    </Note>
   </Tab>
-  <Tab title="Apple Intel">
-    💻 **Apple Intel (x64)**
-    
-    1. Download the Intel Mac installer from the official website.
-    2. Open the downloaded `.pkg` file and follow the on-screen instructions.
-    3. If you use Homebrew, run:
-    
-    ```sh
-    arch -x86_64 brew install <your-package>
-    ```
-    4. After installation, verify with:
-    ```sh
-    <your-app> --version
-    ```
-    5. If you encounter issues, ensure you are not running the Apple Silicon version.
+  <Tab title="Windows">
+    <CardGroup cols={2}>
+      <Card title="Windows x64" icon="download" horizontal cta="Download">
+        Most Win 10/11 devices
+      </Card>
+      <Card title="Windows arm64" icon="download" horizontal cta="Download">
+        Select Windows devices
+      </Card>
+    </CardGroup>
+    1. Download the correct Windows installer from above.
+
+       <Info>
+         You may need to bypass Browser security to download the file.
+       </Info>
+    2. Bypass Windows Security if necessary.
+    3. Open the installer and follow the instructions.
+
+    ## Initial Set Up
+
+    EasyCode requires **NodeJS** and **Git** to function properly.
+
+    [images/get-started/setup.png]
+
+    If they are not installed, EasyCode will guide you through the installation.
+
+    <Note>
+      You will be prompted to give `Electron` and `NodeJS` network access during installation, make sure to **Accept**.
+
+      [images/get-started/electron.png]
+    </Note>
   </Tab>
-  <Tab title="Windows x64">
-    🪟 **Windows x64**
-    
-    1. Download the Windows x64 installer from the official website.
-    2. Double-click the `.exe` file and follow the installation wizard.
-    3. After installation, open Command Prompt and verify:
-    ```sh
-    <your-app> --version
-    ```
-    4. If you see any errors, ensure you downloaded the correct architecture version.
-  </Tab>
-  <Tab title="Windows Arm64">
-    🪟 **Windows Arm64**
-    
-    1. Download the Windows Arm64 installer from the official website.
-    2. Double-click the `.exe` file and follow the installation wizard.
-    3. After installation, open Command Prompt and verify:
-    ```sh
-    <your-app> --version
-    ```
-    4. If you see any errors, ensure you downloaded the correct architecture version.
+  <Tab title="Linux">
+    Linux is currently not supported.
   </Tab>
 </Tabs>
+
+## Common Installation Problems
+
+<AccordionGroup>
+  <Accordion title="I cannot download the installer file.">
+    Check for any browser notifications. Some brownsers can silently block large files or ask for download permission. 
+
+    Try a different browser. Some users who use Brave or Arc have reported issues with downloading the installer. Try using Chrome or Safari. 
+  </Accordion>
+  <Accordion title="Installation fails due to errors">
+    This is likely caused by NodeJS or Git not being installed correctly. If installation fails after multiple attempls, please try installing NodeJS and Git manually. 
+
+    You can find the official NodeJS and Git installation instructions below:
+
+    - [NodeJS Official Download](https://nodejs.org/en/download)
+    - [Git Official Download](https://git-scm.com/downloads)
+  </Accordion>
+</AccordionGroup>
