@@ -1,8 +1,68 @@
 ---
 title: 'Installation'
-description: 'Learn how to install and set up your environment.'
+description: 'Set up EasyCode Flow.'
 ---
 
-## Installation
+EasyCode Flow is an **IDE** for vibe coders. Unlike web based AI app builders, EasyCode Flow needs to be installed on your operating system.
 
-_This page will guide you through the installation process._
+This provides many benefits:
+- you have full control of the development environment
+- you have full ownership of the codebase
+- you have full access to IDE features
+
+<Tabs>
+  <Tab title="Apple Silicon">
+    🖥️ **Apple Silicon (M1/M2/M3)**
+    
+    1. Download the Apple Silicon installer from the official website.
+    2. Open the downloaded `.pkg` file and follow the on-screen instructions.
+    3. If you use Homebrew, run:
+    
+    ```sh
+    arch -arm64 brew install <your-package>
+    ```
+    4. After installation, verify with:
+    ```sh
+    <your-app> --version
+    ```
+    5. If you encounter issues with Rosetta, ensure you are running the native Apple Silicon version.
+  </Tab>
+  <Tab title="Apple Intel">
+    💻 **Apple Intel (x64)**
+    
+    1. Download the Intel Mac installer from the official website.
+    2. Open the downloaded `.pkg` file and follow the on-screen instructions.
+    3. If you use Homebrew, run:
+    
+    ```sh
+    arch -x86_64 brew install <your-package>
+    ```
+    4. After installation, verify with:
+    ```sh
+    <your-app> --version
+    ```
+    5. If you encounter issues, ensure you are not running the Apple Silicon version.
+  </Tab>
+  <Tab title="Windows x64">
+    🪟 **Windows x64**
+    
+    1. Download the Windows x64 installer from the official website.
+    2. Double-click the `.exe` file and follow the installation wizard.
+    3. After installation, open Command Prompt and verify:
+    ```sh
+    <your-app> --version
+    ```
+    4. If you see any errors, ensure you downloaded the correct architecture version.
+  </Tab>
+  <Tab title="Windows Arm64">
+    🪟 **Windows Arm64**
+    
+    1. Download the Windows Arm64 installer from the official website.
+    2. Double-click the `.exe` file and follow the installation wizard.
+    3. After installation, open Command Prompt and verify:
+    ```sh
+    <your-app> --version
+    ```
+    4. If you see any errors, ensure you downloaded the correct architecture version.
+  </Tab>
+</Tabs>
