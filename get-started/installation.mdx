@@ -16,40 +16,58 @@ This provides many benefits:
 <Tabs>
   <Tab title="MacOS">
     <CardGroup cols={2}>
-      <Card title="Apple Silicon" icon="download" horizontal>
+      <Card title="Apple Silicon" icon="download" horizontal href="https://drive.google.com/file/d/1tWzquHEw_6S9-7YWPal7UaK5EW87jWw-/view?usp=drive_link">
         M Series Macs
       </Card>
-      <Card title="Apple Intel" icon="download" horizontal>
-        Intel based Macs
+      <Card title="Apple Intel" icon="download" horizontal disabled>
+        Not supported right now
       </Card>
     </CardGroup>
     1. Download the correct installer from above.
     2. Open the installer, move EasyCode to the Applications folder.
     3. Open EasyCode.
 
-    [images/get-started/install-macos.mp4]
+    <Frame height="100%">
+      <img
+        src="/images/quick-start/install-macos.gif"
+        alt="MacOS Installation GIF"
+        style={{height: '100%', width: '100%', objectFit: 'contain'}}
+      />
+    </Frame>
 
     ## Initial Set Up
 
     EasyCode requires **NodeJS** and **Git** to function properly.
 
-    [images/get-started/setup.png]
+    <Frame height="100%">
+      <img
+        src="/images/quick-start/setup.jpg"
+        alt="Initial Setup Screenshot"
+        style={{height: '100%', width: '100%', objectFit: 'contain'}}
+      />
+    </Frame>
 
     If they are not installed, EasyCode will guide you through the installation.
 
     <Note>
       During Git installation, you will asked to include `xcode-select`, make sure to **Accept**. This step will take 5-10 minutes but is the only official to install **Git**.
 
-      [images/get-started/xcode.png]
+      <Frame height="100%">
+        <img
+          src="/images/quick-start/macos.png"
+          alt="Xcode Select Prompt"
+          style={{height: '100%', width: '100%', objectFit: 'contain'}}
+        />
+      </Frame>
     </Note>
   </Tab>
   <Tab title="Windows">
     <CardGroup cols={2}>
-      <Card title="Windows x64" icon="download" horizontal cta="Download">
+      <Card title="Windows x64" icon="download" horizontal href="https://drive.google.com/file/d/1UovA4n0MNyZ00XIvjt65qaUs_EAc_w-v/view?usp=drive_link">
         Most Win 10/11 devices
       </Card>
-      <Card title="Windows arm64" icon="download" horizontal cta="Download">
-        Select Windows devices
+      <Card title="Windows arm64" icon="download" horizontal disabled>
+        Not supported right now
       </Card>
     </CardGroup>
     1. Download the correct Windows installer from above.
@@ -64,14 +82,26 @@ This provides many benefits:
 
     EasyCode requires **NodeJS** and **Git** to function properly.
 
-    [images/get-started/setup.png]
+    <Frame height="100%">
+      <img
+        src="/images/quick-start/setup.jpg"
+        alt="Initial Setup Screenshot"
+        style={{height: '100%', width: '100%', objectFit: 'contain'}}
+      />
+    </Frame>
 
     If they are not installed, EasyCode will guide you through the installation.
 
     <Note>
       You will be prompted to give `Electron` and `NodeJS` network access during installation, make sure to **Accept**.
 
-      [images/get-started/electron.png]
+      <Frame height="100%">
+        <img
+          src="/images/quick-start/electron.png"
+          alt="Electron Network Access Prompt"
+          style={{height: '100%', width: '100%', objectFit: 'contain'}}
+        />
+      </Frame>
     </Note>
   </Tab>
   <Tab title="Linux">

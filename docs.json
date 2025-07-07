@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "EasyCode Flow Documentation",
+  "name": "EasyCode Flow",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -65,10 +65,6 @@
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
@@ -79,7 +75,7 @@
     "primary": {
       "type": "button",
       "label": "Download",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://easycode.mintlify.app/get-started/installation"
     }
   },
   "footer": {
