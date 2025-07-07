@@ -1,8 +1,109 @@
 ---
-title: 'Debugging'
-description: 'Techniques and tools for debugging your application.'
+title: "Debugging"
+description: "Techniques and tools for debugging your application."
 ---
 
-## Debugging
+The key to AI debugging is:
 
-_This guide covers debugging techniques._
+- knowing which type of error you have
+- choosing the right tool/technique to fix it
+- using AI debugging best practices
+
+## General Best Practices
+
+- use advanced models for bug fixing
+- be specific when prompting the AI (use images, what's working, what's not working, etc)
+- use checkpoints to create "backups" of your codebase
+- if you notice the AI is getting stuck, revert to a previous checkpoint and try different approach
+
+<Info>
+  For more on debugging workflow, check out our comprehensive debugging flow chart. 
+</Info>
+
+## Fix Lint/Compile Errors
+
+Lint/compile errors happen before the execution of your app. It can be a failed type check, a formatting issue, an unused import, etc. 
+
+You can easily spot lint/compile errors because EasyCode Flow runs lint and build checks after each edit, catch errors, and display them either in the **Chat Panel** or in the **App Preview**.
+
+[images/guides/compile-error.jpg]
+
+You will be prompted with a **automatic quick fix**. You can either Accept or Reject. 
+
+<Tip>
+  Some lint errors do not break your app's functionality. However, we recommend you try to fix them as they come up to prevent accumulation of errors.
+</Tip>
+
+## Fix Runtime Errors
+
+Runtime errors happens during the execution of your app. It can be an unhandled exception, a failed network request, etc.
+
+You can find them inside server side or client side console logs. To make things easier, EasyCode constantly checks for runtime errors in your logs and display them in the **Flow Diagram**.
+
+[images/guides/runtime-error.mp4]
+
+To fix runtime errors:
+
+- click **Fix Error** inside the Flow Diagram
+- notice it injects runtimelogs into your Chat Context with pre-populated prompt
+- submit chat
+
+## Fix UI Issues
+
+When trying to fix UI issues, provide as much details as possible. You can do so by:
+
+- describe in detail via text
+- provide an image using **Built-in Screenshot** or **Attach Image**
+- specify the element using **Element Selector** 
+
+  [images/guides/visual-edit.mp4]
+
+## Fix Unexpected Behaviors
+
+Unlike lint or runtime errors, there may not be an explicit error message. Here is an exmaple:
+
+**Expected Behavior**: Click button, modal opens up. \
+**Actual Behavior**: Click button, nothing shows up. 
+
+<Tip>
+  Use the **Flow Diagram** to unerstand where things are failing. It could be in the front end, database, config or in a 3rd party library. Knowing this will help you prompt the AI better, significantly increasing the chance of fixing it.
+</Tip>
+
+To fix unexpected behaviors:
+
+- describe **both** what is happening, and what you expect to happen. 
+- provide runtime log when relevant 
+- use **interactive debugger** if prompted
+
+### Interactive Debugger
+
+Once you describe the problem to the AI, EasyCode will automatically assess the situation and decide if **Interactive Debugger** should be activated. When activated, it will ask you to carry out the steps that cause the unexpected behavior. 
+
+[images/guides/interactive-debug.mp4]
+
+<Steps>
+  <Step title="Reproduce the problem">
+    This can be simple such as clicking a button, or invovle multiple steps such as loggin in, navigating to a different page, providing some user input, and clicking a submit button. 
+  </Step>
+  <Step title="EasyCode records what's happening">
+    As you take these steps, EasyCode will add logpoints inside the relevant functions, tracing code execution end-to-end to determine where things went wrong. 
+
+    <Info>
+      Log points are different from console logs, they do not pollute your code thus do not need to be removed. 
+    </Info>
+  </Step>
+  <Step title="Click Reproduction Complete">
+    EasyCode adds the relevant log data to context, and tries to fix the problem
+  </Step>
+</Steps>
+
+
+## Optimal Debugging Workflow
+
+As a rule of thumb, if you have accepted **automatic quick fix** suggestions more than 3 times, but one of the following situations are happening, you should reject further fix attempts, re-evaluate the error, athe same lint error
+
+EasyCode has various tools to help you fix different errors & bugs:
+
+- automatic quick fix
+- runtime log debugging
+- interactive debugging
