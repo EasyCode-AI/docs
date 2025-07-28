@@ -3,6 +3,107 @@ title: 'FAQs'
 description: 'Frequently asked questions and answers.'
 ---
 
-## FAQs
+## Getting Started
 
-_Frequently asked questions._
+<AccordionGroup>
+  <Accordion title="How do I get started?">
+    Follow the 4-step Quick Start above, or check out the full [Quick Start Guide](../get-started/quick-start) for a detailed walkthrough.
+  </Accordion>
+  <Accordion title="I cannot download the installer file.">
+    Check for any browser notifications. Some browsers can silently block large files or ask for download permission.
+
+    Try a different browser. Some users who use Brave or Arc have reported issues with downloading the installer. Try using Chrome or Safari.
+  </Accordion>
+  <Accordion title="Installation fails due to errors">
+    This is likely caused by NodeJS or Git not being installed correctly. If installation fails after multiple attempts, please try installing NodeJS and Git manually.
+
+    You can find the official NodeJS and Git installation instructions below:
+
+    - [NodeJS Official Download](https://nodejs.org/en/download)
+    - [Git Official Download](https://git-scm.com/downloads)
+  </Accordion>
+  <Accordion title="What are the system requirements?">
+    EasyCode Flow requires **NodeJS** and **Git** to function properly. Currently supported platforms:
+    - **MacOS**: Apple Silicon (M Series Macs) - Apple Intel not supported right now
+    - **Windows**: Windows x64 (Windows arm64 not supported right now)  
+    - **Linux**: Currently not supported
+  </Accordion>
+</AccordionGroup>
+
+## Supabase Integration
+
+<AccordionGroup>
+  <Accordion title="Can I use my own Supabase project?">
+    Currently, EasyCode Flow integrates with new Supabase projects. Existing project support is coming soon—let us know if you need early access!
+  </Accordion>
+  <Accordion title="I cannot connect my Supabase account.">
+    - Make sure you still have available project slots in your Supabase organization. If you are on a free Supabase plan, you will have 2 project slots. 
+    - If you already have 2 or more projects, you can pause one of the projects to make room for new projects.
+
+    If all fails, try creating a New Organization in Supabase on a free tier, and click "Connect to Supabase" again from within EasyCode to initiate the access authorization. 
+  </Accordion>
+</AccordionGroup>
+
+## APIs and Integrations
+
+<AccordionGroup>
+  <Accordion title="How do I connect APIs?">
+    Go to the [API Integration Guide](../guides/connect-APIs) for step-by-step instructions on adding popular APIs. EasyCode Flow has native integration with many 3rd party APIs like Supabase, OpenAI, and more. Stripe integration is coming soon!
+  </Accordion>
+  <Accordion title="Are my API keys secure?">
+    Yes! All API keys are stored locally and not shared with anyone else. EasyCode Agent will always store them server side so they are not exposed to the public.
+  </Accordion>
+  <Accordion title="What APIs are natively supported?">
+    EasyCode Flow has native integrations with:
+    - **Supabase**: Authentication, Database, realtime, etc.
+    - **Stripe**: Coming soon! Everything payment related
+    - **Popular APIs**: OpenAI, OpenRouter, Reddit, Anthropic, and more
+  </Accordion>
+  <Accordion title="I don't see the integration I need">
+    We're constantly adding new integrations! If you don't see a specific API or service you need:
+    - **Stripe**: Payment integration is coming soon
+    - **Other integrations**: Check back regularly as we add new native integrations
+    - **Custom APIs**: You can still connect any REST API manually by adding your API keys and endpoints
+    - **Feature requests**: Let us know what integrations you'd like to see via [Discord](https://discord.gg/3kqeNhsQxH) or [email](mailto:support@easycode.ai)
+  </Accordion>
+</AccordionGroup>
+
+## Debugging and Deployment
+
+<AccordionGroup>
+  <Accordion title="My deployment failed.">
+    Make sure all linter errors and runtime errors are fixed before trying to deploy. 
+
+    After fixing any remaining errors, initiate deployment again. 
+  </Accordion>
+  <Accordion title="I'm stuck trying to fix an error">
+    Use EasyCode Flow's debugging tools:
+    - For compile/lint errors: Use the automatic quick fix prompts
+    - For runtime errors: Click "Fix Error" in the Flow Diagram
+    - For UI issues: Use Built-in Screenshot, Attach Image, or Element Selector
+    - For unexpected behaviors: Use the Interactive Debugger when prompted
+    
+    Check the [Debugging Guide](../guides/debugging) for detailed instructions.
+  </Accordion>
+  <Accordion title="What's the difference between lint/compile errors and runtime errors?">
+    - **Lint/compile errors** happen before your app runs (type checks, formatting issues, unused imports). EasyCode Flow displays these in the Chat Panel or App Preview.
+    - **Runtime errors** happen during execution (unhandled exceptions, failed network requests). These appear in console logs and the Flow Diagram.
+  </Accordion>
+</AccordionGroup>
+
+
+## Support and Feedback
+
+<AccordionGroup>
+  <Accordion title="How do I get support?">
+    For code-related support, submit a report directly from within the app during the beta period. For general support:
+    - **Discord**: Join our community [here](https://discord.gg/3kqeNhsQxH) 
+    - **Email**: Contact us at [support@easycode.ai](mailto:support@easycode.ai)
+  </Accordion>
+  <Accordion title="How do I report bugs or request features?">
+    Since we're in early beta, you can:
+    - Submit code-related issues directly from within the app
+    - Join our [Discord community](https://discord.gg/3kqeNhsQxH) for discussions
+    - Email us at [support@easycode.ai](mailto:support@easycode.ai) for feature requests
+  </Accordion>
+</AccordionGroup>
