@@ -54,13 +54,8 @@
       "anchors": [
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "href": "https://discord.gg/3kqeNhsQxH",
+          "icon": "discord"
         }
       ]
     }
@@ -69,13 +64,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@easycode.ai"
+        "href": "https://easycode.mintlify.app/troubleshoot/support"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Download",
-      "href": "https://easycode.mintlify.app/get-started/installation"
+      "href": "https://easycode.mintlify.app/get-started/installation#download"
     }
   },
   "footer": {
